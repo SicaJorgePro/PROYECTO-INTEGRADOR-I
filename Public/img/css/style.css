@@ -1,0 +1,72 @@
+/* ! FUENTES */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Fredericka+the+Great&family=Gabriela&family=Gasoek+One&family=Noto+Serif+HK:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.seccion_headerError {
+  background-image: url(../ERRORES/error_500_servidor.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  position:relative;
+}
+.seccion_headerError a h1 {
+  position: absolute;
+  width: 50%;
+  bottom:0;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-family: "Fredericka the Great", cursiva;
+  font-size: 35px;
+}
+.img_logo{
+  width:15%;
+  height: 30%;
+}
+.seccion_headerError_404{
+  background-image: url(../ERRORES/error_404.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 85vh;
+  position:relative;
+}
+.seccion_headerError_404 a h1 {
+  position: absolute;
+  width: 50%;
+  bottom:0;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-family: "Fredericka the Great", cursiva;
+  font-size: 35px;
+}
+.seccion_portada{
+  background-image: url(../portada.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  position:relative;
+}
+/* .seccion_portada h1,h2,h3,h4 {
+  position: absolute;
+  width: 50%;
+  bottom:0;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-family: "Fredericka the Great", cursiva;
+  font-size: 35px;
+} */

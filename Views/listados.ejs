@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+<main>
+  <div class="container mt-5 p-4">
+      <h1 class="display-5 text-center">LISTADO DE PRODUCTOS</h1>
+      <p class="fs-2 fw-bold text-center">Cantidad de Registros : <%=productos.length%></p> 
+  </div> 
+  <div class="container">
+        <div class="row">
+              <div class="col">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Nombre</th>
+                            <th>Importe</th>
+                            <th>Categoria</th>
+                            <th>Cantidad</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                                <% productos.forEach(producto=> { %>
+                                <tr>
+                                    <th scope="row"><%= producto.id %></th>
+                                    <td><%= producto.nombre %> </td>
+                                    <td><%= producto.importe %></td>
+                                    <td><%= producto.categoria %></td>  
+                                    <td><%= producto.stock %></td>
+                                </tr>
+                      <% }) %>      
+                      </tbody>
+                    </table>
+                    <% if (productos.length === 0){%>  
+                          <h1 class="text-center">NO EXISTE LA CATEGORIA</h1>
+                    <% } %>
+             </div>
+        </div>
+   </div> 
+
+
+</main>

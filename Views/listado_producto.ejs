@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+<main>
+  <div class="container mt-5 p-4">
+    <h1 class="display-5 text-center">PRODUCTO OBTENIDO</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>Nombre</th>
+              <th>Importe</th>
+              <th>Categoria</th>
+              <th>Cantidad</th>
+            </tr>
+          </thead>
+            <% if (!producto===false) {%>
+          <tbody>
+             <tr>
+              <th scope="row"><%= producto.id %></th>
+              <td><%= producto.nombre %></td>
+              <td><%= producto.importe %></td>
+              <td><%= producto.categoria %></td>
+              <td><%= producto.stock %></td>
+            </tr>
+          </tbody>
+          <% }%>
+        </table>
+        <% if (!producto===true){%> 
+             <h1 class="text-center">NO EXISTE EL REGISTRO</h1>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</main>
