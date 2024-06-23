@@ -206,91 +206,91 @@
     "id": 30,
     "nombre": "Windows 7",
     "importe": 100,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 2
   },
   {
     "id": 31,
     "nombre": "Windows 8",
     "importe": 110,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 3
   },
   {
     "id": 32,
     "nombre": "Windows Server",
     "importe": 300,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 1
   },
   {
     "id": 33,
     "nombre": "Microsoft Excel",
     "importe": 60,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 5
   },
   {
     "id": 34,
     "nombre": "Microsoft Word",
     "importe": 60,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 6
   },
   {
     "id": 35,
     "nombre": "Microsoft PowerPoint",
     "importe": 60,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 4
   },
   {
     "id": 36,
     "nombre": "Norton Antivirus",
     "importe": 50,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 7
   },
   {
     "id": 37,
     "nombre": "Kaspersky Antivirus",
     "importe": 50,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 8
   },
   {
     "id": 38,
     "nombre": "Adobe Illustrator",
     "importe": 180,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 3
   },
   {
     "id": 39,
     "nombre": "Adobe Premiere Pro",
     "importe": 200,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 2
   },
   {
     "id": 40,
     "nombre": "AutoCAD LT",
     "importe": 200,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 1
   },
   {
     "id": 41,
     "nombre": "Corel Painter",
     "importe": 150,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 4
   },
   {
     "id": 42,
     "nombre": "Sony Sound Forge",
     "importe": 100,
-    "categoria": "software ",
+    "categoria": "software",
     "stock": 5
   },
   {
