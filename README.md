@@ -24,7 +24,7 @@ Con NodeJS, se utilizan las librerías de express para la creación de rutas y m
 - El sistema realiza todas las operaciones de un CRUD mediante las peticiones GET- POST - PUT y DELETE. Utilizando el servicio Thunder-Cliente.
 
 ##  Datos necesarios que se requieren:
- la carpeta **env** esta vacia colocar:
+ El archivo **env-example** esta vacio, remplazarlo por el archivo **env** 
 
 - Puerto
 
