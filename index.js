@@ -16,7 +16,7 @@ const productos_categRouter = require("./Src/routers/productos_categ.routers")
 
 app.use(express.json());
 
-const { connectToMongoDB, disconnectToMongoDB } = require("./Src/mongodb");
+const { connectToMongoDB, disconnectToMongoDB } = require("./Src/db/mongodb");
 
 const base_dato = process.env.base;
 const colec_base = process.env.coleccion_base;

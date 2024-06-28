@@ -80,6 +80,9 @@ En el proyecto hay una carpeta llamada JSON donde está el archivo **computacion
 
 
 ### Para realizar las peticiones de rutas:
+- Crear moulos de rutas con routers , en la carpetas **src** y subcarpeta **ruters** se describen todas las rutas por modulos. 
+
+
 
 - get "/" (indica el inico, la portada del proyecto presionando el link INICIO del menú o
 por medio de la url 

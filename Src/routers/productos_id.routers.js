@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { connectToMongoDB, disconnectToMongoDB } = require("../mongodb");
+const { connectToMongoDB, disconnectToMongoDB } = require("../db/mongodb");
 
 const base_dato = process.env.base;
 const colec_base = process.env.coleccion_base;

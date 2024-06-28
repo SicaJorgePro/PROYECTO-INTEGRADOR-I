@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { connectToMongoDB, disconnectToMongoDB } = require("../mongodb");
+const { connectToMongoDB, disconnectToMongoDB } = require("../db/mongodb");
 
 const base_dato = process.env.base;
 const colec_base = process.env.coleccion_base;
@@ -18,6 +18,7 @@ router.get("/productos/categorias/:categ", async (req, res) => {
   }
 
   const db = client.db(base_dato);
+
   const productos = await db
     .collection(colec_base)
     .find({ categoria: { $regex: produc_cat, $options: "i" } })
@@ -25,7 +26,8 @@ router.get("/productos/categorias/:categ", async (req, res) => {
     .toArray();
 
   // ? desactivar base db
-  await connectToMongoDB();
+  await disconnectToMongoDB();
+
   if (Object.keys(productos).length === 0) {
     res.status(404);
   } else {
