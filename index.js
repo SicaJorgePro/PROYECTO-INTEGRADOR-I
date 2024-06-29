@@ -9,9 +9,8 @@ app.use(express.static(path.join(__dirname, "Public")));
 // ubicacion del rutas 
 const mainrouters = require("./Src/routers/main.routers");
 const productosRouter = require("./Src/routers/productos.routers")
-const ingreso_prodRouter = require("./Src/routers/ingreso_produ.routers");
-const modificar_ProductRouter = require("./Src/routers/Modifcar_Produ.routers");
-const  borrar_ProductRouter = require("./Src/routers/borrar_produ.routers");
+const GRUD_Router = require("./Src/routers/GRUD_produ.routers");
+
 
 
 app.use(express.json());
@@ -22,14 +21,15 @@ app.use(mainrouters);
 //  ? mostar los productos all / id/ categoria
 app.use("/productos",productosRouter);
 
+
 // ? ruta con post crear un nuevo registro
-app.use("/productos",ingreso_prodRouter);
+app.use("/productos", GRUD_Router);
 
 //? ruta para modifacr productos
-app.use("/productos",modificar_ProductRouter);
+app.use("/productos", GRUD_Router);
 
 //? ruta para borrar productos
-app.use("/productos",borrar_ProductRouter);
+app.use("/productos", GRUD_Router);
 
 //? cuando no existe la ruta
 app.use((req, res) => {

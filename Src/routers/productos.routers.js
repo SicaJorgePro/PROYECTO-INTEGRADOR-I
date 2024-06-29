@@ -3,6 +3,8 @@ const router = express.Router();
 
 const controler= require("../contollers/productos.controler")
 
+//! RUTAS POR WEB UTILIZANDO GET 
+
 // ? mostar todo los productos
 router.get("/", controler.productos_all);
 

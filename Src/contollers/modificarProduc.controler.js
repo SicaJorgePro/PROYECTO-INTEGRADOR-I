@@ -1,18 +1,19 @@
-const express = require("express");
-const router = express.Router();
-
+//? activar y desactivar la base
 const { connectToMongoDB, disconnectToMongoDB } = require("../db/mongodb");
 
+//? llamr a varibles de entorno que son nombre de la base
+//? y nombre de la coleccion
 const base_dato = process.env.base;
 const colec_base = process.env.coleccion_base;
 
-router.put("/:id", async (req, res) => {
+
+const ModificarProductos = async (req, res) => {
   const id = parseInt(req.params.id) || 0;
   const modifproducto = req.body;
   const reg_modif = id;
 
   if (Object.keys(modifproducto).length === 0) {
-    return res.status(422).send("Error en el formato de los datos");
+    return res.status(422).send("No hay datos para modificar ");
   }
   const client = await connectToMongoDB();
   if (!client) {
@@ -38,6 +39,11 @@ router.put("/:id", async (req, res) => {
         await disconnectToMongoDB();
       });
   }
-});
+};
 
-module.exports = router;
+
+
+
+module.exports = {
+  ModificarProductos,
+};

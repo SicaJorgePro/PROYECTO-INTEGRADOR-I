@@ -1,13 +1,14 @@
-const express = require("express");
-const router = express.Router();
-
+//? activar y desactivar la base
 const { connectToMongoDB, disconnectToMongoDB } = require("../db/mongodb");
 
+//? llamr a varibles de entorno que son nombre de la base
+//? y nombre de la coleccion
 const base_dato = process.env.base;
 const colec_base = process.env.coleccion_base;
 
 
-router.post("/", async (req, res) => {
+
+const altasProductos = async (req, res) => {
   const nuevoproducto = req.body;
   const reg_id = nuevoproducto.id;
 
@@ -38,10 +39,9 @@ router.post("/", async (req, res) => {
         await disconnectToMongoDB();
       });
   }
-});
+};
 
 
-
-
-
-module.exports = router;
+module.exports = {
+  altasProductos
+};

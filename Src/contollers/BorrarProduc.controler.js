@@ -1,12 +1,12 @@
-const express = require("express");
-const router = express.Router();
-
+//? activar y desactivar la base
 const { connectToMongoDB, disconnectToMongoDB } = require("../db/mongodb");
 
+//? llamr a varibles de entorno que son nombre de la base
+//? y nombre de la coleccion
 const base_dato = process.env.base;
 const colec_base = process.env.coleccion_base;
 
-router.delete("/:id", async (req, res) => {
+const DeleteProductos = async (req, res) => {
   const id = parseInt(req.params.id) || 0;
   if (!req.params.id) {
     res.status(422).send("Error en el formato de los datos");
@@ -33,7 +33,9 @@ router.delete("/:id", async (req, res) => {
     .finally(async () => {
       await disconnectToMongoDB();
     });
-});
+};
 
 
-module.exports = router;
+module.exports = {
+  DeleteProductos,
+};
