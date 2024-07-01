@@ -17,7 +17,9 @@
 
 - El sistema utiliza la librería de express para crear las rutas y el servidor.
 
-- Trabaja con la librería  dontev es para utilizar varibales de entorno
+- Trabaja con la librería  dontev es para utilizar varibales de entorno.
+
+- Utiliza vistas parciales y layouts para el diseño.
 
 - Se utiliza la librería ejs para realizar motores de plantilla y poder unir javacrip con html .
 

@@ -27,7 +27,7 @@ const productos_all = async (req, res) => {
 // ! funcion de mostar productos por identificacion
 const productos_id = async (req, res) => {
   const produc_id = parseInt(req.params.id) || 0;
-  console.log(produc_id);
+  
   if (produc_id === 0) {
     res.status(404).render("error_404", { titulo: "PAGINA NO ENCONTRADA" });
     return;
@@ -81,6 +81,7 @@ const produc_categoria = async (req, res) => {
   }
   res.render("listados", { titulo: "PRODUCTOS POR CATEGORIA", productos });
 };
+
 
 
 module.exports = {

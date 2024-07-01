@@ -3,17 +3,20 @@ const app = express();
 
 const path = require("path");
 
+const layouts=require("express-ejs-layouts")
+
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "Public")));
+app.use(layouts)
+app.set("layout","layouts/layout")
 
-// ubicacion del rutas 
+// * ubicacion del rutas 
 const mainrouters = require("./Src/routers/main.routers");
 const productosRouter = require("./Src/routers/productos.routers")
 const GRUD_Router = require("./Src/routers/GRUD_produ.routers");
 
-
-
 app.use(express.json());
+
 
 // ? ruta raiz
 app.use(mainrouters);
@@ -31,11 +34,10 @@ app.use("/productos", GRUD_Router);
 //? ruta para borrar productos
 app.use("/productos", GRUD_Router);
 
-//? cuando no existe la ruta
+// ? cuando no existe la ruta
 app.use((req, res) => {
   res.status(404).render("error_404", { titulo: "PAGINA NO ENCONTRADA" });
 });
-
 
 const PORT = process.env.PORT || 3000;
 
