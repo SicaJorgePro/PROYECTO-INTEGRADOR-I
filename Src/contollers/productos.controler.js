@@ -1,12 +1,13 @@
 //? activar y desactivar la base 
 const { connectToMongoDB, disconnectToMongoDB } = require("../db/mongodb");
 
-//? llamr a varibles de entorno que son nombre de la base 
+//? llamar a varibles de entorno que son nombre de la base 
 //? y nombre de la coleccion
 const base_dato = process.env.base;
 const colec_base = process.env.coleccion_base;
 
 // ! funcion de mostar todos los productos
+
 const productos_all = async (req, res) => {
   const client = await connectToMongoDB();
   if (!client) {

@@ -25,13 +25,13 @@ app.use(mainrouters);
 app.use("/productos",productosRouter);
 
 
-// ? ruta con post crear un nuevo registro
+// ? ruta para crear un nuevo registro <POT>
 app.use("/productos", GRUD_Router);
 
-//? ruta para modifacr productos
+//? ruta para modifacr productos <PUT>
 app.use("/productos", GRUD_Router);
 
-//? ruta para borrar productos
+//? ruta para borrar productos <DELETE>
 app.use("/productos", GRUD_Router);
 
 // ? cuando no existe la ruta
