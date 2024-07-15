@@ -1,30 +1,38 @@
-# Proyecto basado en Node.js y MongoDB con CRUD
-
-Con NodeJS, se utilizan las librerías de express para la creación de rutas y mongodb; que permite crear un cliente de base de datos y realizar la conexión y administración con MongoDB Atlas.
+# <font color="red">Proyecto basado en Node.js y MongoDB con CRUD </font>
+***
+✒ Con NodeJS, se utilizan las librerías de express para la creación de rutas y mongodb; que permite crear un cliente de base de datos y realizar la conexión y administración con MongoDB Atlas.
 
 ### Librerías para este Proyecto
-    - dotenv
-    - ejs
-    - express
-    - mongodb
-    - Nodemon (dependencia)
+  :+1: dotenv
+
+  :+1: ejs
+
+  :+1: express
+
+  :+1:mongodb
+
+  :+1:Nodemon (dependencia)
 
 ## Características.
 
 - El sistema utiliza la librería de express para crear las rutas y el servidor.
 
-- Trabaja con la librería  dontev es para utilizar varibales de entorno
+- Trabaja con la librería  dontev es para utilizar varibales de entorno.
+
+- Utiliza vistas parciales y layouts para el diseño.
 
 - Se utiliza la librería ejs para realizar motores de plantilla y poder unir javacrip con html .
 
-- Utilización de bootstrap con enlace de css y css propio para darle estilo a las  vistas.  
+- Utiliza <u>*** Ruters, Controladores y Modulos ***</u> que permite organizar las rutas de nuestra aplicación de manera modular y fácil de mantener.
+
+-  Utilización de bootstrap con enlace de css y css propio para darle estilo a las  vistas.  
 
 - El sistema utiliza la librería de mongodb para interactuar con la base de datos NoSQL.
 
 - El sistema realiza todas las operaciones de un CRUD mediante las peticiones GET- POST - PUT y DELETE. Utilizando el servicio Thunder-Cliente.
 
 ##  Datos necesarios que se requieren:
- El archivo **env-example** esta vacio, remplazarlo por el archivo **env** 
+ :point_right: El archivo **env-example** esta vacio, remplazarlo por el archivo **env** 
 
 - Puerto
 
@@ -32,23 +40,24 @@ Con NodeJS, se utilizan las librerías de express para la creación de rutas y m
 
 - base
 
-- colección_base
+- colección_base          
 
-Necesitan estos datos para el funcionamiento del proyecto ya que trabaja con variables de entorno. **Advertencia!** colocar el nombre de la BASE entre comillas y la colección también 
+⚠ Necesitan estos datos para el funcionamiento del proyecto ya que trabaja con variables de entorno. **Advertencia!** colocar el nombre de la BASE entre comillas y la colección también 
 
 
 ### Estructura de la base de datos
 Deberá estar compuesto por 6 campos:
 
-		- id
-		- nombre
-		- importe
-		- categoría
-		- stock
-		_id (se genera solo al crear la colección)
+                💾 id
+                💾 nombre
+                💾 importe
+                💾 categoría
+                💾 stock
+                💾 _id (se genera solo al crear la colección)
 
-En el proyecto hay una carpeta llamada JSON donde está el archivo **computacion.json** para importar como colección de la base creada y además consta de 50 registros.
-#### ARCHIVO JSON 		
+En el proyecto hay una :file_folder: carpeta llamada **JSON** donde está el archivo <u>**computacion.json**</u> para importar como colección de la base creada y además consta de 50 registros.
+
+ #### 🗃 ARCHIVO JSON 		
 ``` JSON
 [
   {
@@ -80,6 +89,7 @@ En el proyecto hay una carpeta llamada JSON donde está el archivo **computacion
 
 
 ### Para realizar las peticiones de rutas:
+***
 
 - get "/" (indica el inico, la portada del proyecto presionando el link INICIO del menú o
 por medio de la url 
@@ -101,6 +111,7 @@ Puede utilizar el navegador, o utilizar la aplicación como Postman o Thunder-Cl
 Esto lo puede ver en forma de imagen en la carpeta **docs** donde esta representada cada situación mencionada.
 
 ## PETICIONES DE POST, PUT Y DELETE 
+___
 
 #### ESTAS PETICIONES SE TRABAJAN con THUNDER CLIENTE O POSMAN
 
@@ -115,6 +126,8 @@ En la carpeta **docs** se encuentra subcarpeta con post, put y deletes donde obs
 ## AUTOR:
 ### **SICA, JORGE**
 #### END
+****
+
 
 
 
