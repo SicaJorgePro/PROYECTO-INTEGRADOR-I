@@ -1,5 +1,7 @@
 ```
 └── 📁PROYECTO INTEGRADOR_I-SICA-JORGE
+    └── .env-example
+    └── .gitignore
     └── 📁docs
         └── 📁CREATE(POST)
             └── PANTALLA1.png
@@ -7,13 +9,14 @@
             └── PANTALLA3.png
             └── PANTALLA4.png
         └── 📁DELETE(DELETE)
-            └── PANTALLA1.png
-            └── PANTALLA2.png
+            └── pantalla1.png
+            └── pantalla2.png
+            └── pantalla3.png
         └── 📁MODIFICAR(PUT)
-            └── PANTALLA1.png
             └── PANTALLA2.png
             └── PANTALLA3.png
             └── PANTALLA4.png
+            └── PANTALLA5.png
         └── pantalla1.png
         └── PANTALLA2.png
         └── PANTALLA3.png
@@ -22,8 +25,11 @@
         └── PANTALLA6.png
         └── PANTALLA7.png
         └── pantalla_servidorerror.png
+    └── index.js
     └── 📁JSON
         └── computacion.json
+    └── package-lock.json
+    └── package.json
     └── 📁Public
         └── 📁img
             └── 📁css
@@ -36,6 +42,7 @@
                 └── logo.webp
             └── portada.png
             └── portada.psd
+    └── README.md
     └── 📁Src
         └── 📁contollers
             └── altasProduc.controler.js
@@ -45,6 +52,11 @@
             └── productos.controler.js
         └── 📁db
             └── mongodb.js
+        └── 📁modulos
+            └── errorbaseDato.modulo.js
+            └── productos.modulo.js
+            └── productos_categ.modulo.js
+            └── producto_id.modulo.js
         └── 📁routers
             └── GRUD_produ.routers.js
             └── main.routers.js
@@ -60,10 +72,4 @@
             └── footer.ejs
             └── menu.ejs
         └── portada.ejs
-    └── README.md
-    └── package-lock.json
-    └── package.json
-    └── index.js
-    └── .env-example
-    └── .gitignore
 ```

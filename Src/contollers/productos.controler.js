@@ -1,88 +1,76 @@
-//? activar y desactivar la base 
-const { connectToMongoDB, disconnectToMongoDB } = require("../db/mongodb");
 
-//? llamar a varibles de entorno que son nombre de la base 
-//? y nombre de la coleccion
-const base_dato = process.env.base;
-const colec_base = process.env.coleccion_base;
+const modulo_p = require("../modulos/productos.modulo");
+const moduloProd_id = require("../modulos/producto_id.modulo");
+const noduloProd_Cat=require("../modulos/productos_categ.modulo")
+
 
 // ! funcion de mostar todos los productos
 
 const productos_all = async (req, res) => {
-  const client = await connectToMongoDB();
-  if (!client) {
-    res.status(500).render("error", { titulo: "ERROR DE SERVIDOR" });
-    return;
-  }
-
-  const db = client.db(base_dato);
-  const productos = await db
-    .collection(colec_base)
-    .find()
-    .sort({ id: 1 })
-    .toArray();
-  await disconnectToMongoDB();
-  res.render("listados", { titulo: "PRODUCTOS DE VENTAS", productos });
+      try {
+        const productos = await modulo_p.modulo_prod(); //! llamar al modulo
+        
+        res.status(200).render("listados", {
+          titulo: "PRODUCTOS DE VENTAS",
+          productos,
+        });
+      } catch (error) {
+        res.status(error.status).render("error", { titulo: error.message });
+        return;
+      }
+ 
 };
 
 // ! funcion de mostar productos por identificacion
-const productos_id = async (req, res) => {
+
+const productos_id = async (req,res) => {
+
   const produc_id = parseInt(req.params.id) || 0;
   
-  if (produc_id === 0) {
-    res.status(404).render("error_404", { titulo: "PAGINA NO ENCONTRADA" });
-    return;
+  try {
+    
+     const producto = await moduloProd_id.modulo_Prod_Id(produc_id); //** llamar al modulo
+      res
+        .status(200)
+        .render("listado_producto", { titulo: "PRODUCTOS", producto });
+     
+  } catch (error) {
+    if (error.status=== 404){
+      return res
+        .status(error.status)
+        .render("error_404", { titulo: error.message });
+    }
+    return res.status(error.status).render("error", { titulo: error.message });
+   
   }
-  const client = await connectToMongoDB();
-  if (!client) {
-    res.status(500).render("error", { titulo: "ERROR DE SERVIDOR" });
-    return;
-  }
-
-  const db = client.db(base_dato);
-  const producto = await db.collection(colec_base).findOne({ id: produc_id });
-
-  // ? desactivar base db
-  await disconnectToMongoDB();
-
-  if (!producto) {
-    res.status(404);
-  } else {
-    res.status(200);
-  }
-  res.render("listado_producto", { titulo: "PRODUCTOS", producto });
+ 
 };
 
 // ! funcion de mostar productos por categoria
 
 const produc_categoria = async (req, res) => {
+
   const produc_cat = req.params.categ || "";
-  const client = await connectToMongoDB();
+  try {
+    const productos = await noduloProd_Cat.modulo_Prod_cat(produc_cat);
+    res.status(200).render("listados", { titulo: "PRODUCTOS POR CATEGORIA",productos});
+    
 
-  if (!client) {
-    res.render("error", { titulo: "ERROR DE SERVIDOR" });
-    return;
-  }
+} catch (error) {
+        if (error.status === 404) {
+          return res
+            .status(error.status)
+            .render("error_404", { titulo: error.message });
+    } else{
+          return res
+            .status(error.status)
+            .render("error", { titulo: error.message });
 
-  const db = client.db(base_dato);
-
-  const productos = await db
-    .collection(colec_base)
-    .find({ categoria: { $regex: produc_cat, $options: "i" } })
-    .sort({ nombre: 1 })
-    .toArray();
-
-  // ? desactivar base db
-  await disconnectToMongoDB();
-
-  if (Object.keys(productos).length === 0) {
-    res.status(404);
-  } else {
-    res.status(200);
-  }
-  res.render("listados", { titulo: "PRODUCTOS POR CATEGORIA", productos });
+    }
+         
+}
+ 
 };
-
 
 
 module.exports = {

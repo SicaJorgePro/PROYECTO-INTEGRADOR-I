@@ -23,7 +23,7 @@
 
 - Se utiliza la librería ejs para realizar motores de plantilla y poder unir javacrip con html .
 
-- Utiliza <u>***ruters y controladores***</u> que permite organizar las rutas de nuestra aplicación de manera modular y fácil de mantener.
+- Utiliza <u>*** Ruters, Controladores y Modulos ***</u> que permite organizar las rutas de nuestra aplicación de manera modular y fácil de mantener.
 
 -  Utilización de bootstrap con enlace de css y css propio para darle estilo a las  vistas.  
 
@@ -40,7 +40,7 @@
 
 - base
 
-- colección_base
+- colección_base          
 
 ⚠ Necesitan estos datos para el funcionamiento del proyecto ya que trabaja con variables de entorno. **Advertencia!** colocar el nombre de la BASE entre comillas y la colección también 
 
