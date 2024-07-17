@@ -1,7 +1,5 @@
 ```
 └── 📁PROYECTO INTEGRADOR_I-SICA-JORGE
-    └── .env-example
-    └── .gitignore
     └── 📁docs
         └── 📁CREATE(POST)
             └── PANTALLA1.png
@@ -25,11 +23,8 @@
         └── PANTALLA6.png
         └── PANTALLA7.png
         └── pantalla_servidorerror.png
-    └── index.js
     └── 📁JSON
         └── computacion.json
-    └── package-lock.json
-    └── package.json
     └── 📁Public
         └── 📁img
             └── 📁css
@@ -42,7 +37,6 @@
                 └── logo.webp
             └── portada.png
             └── portada.psd
-    └── README.md
     └── 📁Src
         └── 📁contollers
             └── altasProduc.controler.js
@@ -53,7 +47,10 @@
         └── 📁db
             └── mongodb.js
         └── 📁modulos
+            └── altasProductos.modulos.js
+            └── deleteProducto.modulo.js
             └── errorbaseDato.modulo.js
+            └── modificarProd.modulo.js
             └── productos.modulo.js
             └── productos_categ.modulo.js
             └── producto_id.modulo.js
@@ -72,4 +69,10 @@
             └── footer.ejs
             └── menu.ejs
         └── portada.ejs
+    └── .env-example
+    └── .gitignore   
+    └── index.js
+    └── README.md
+    └── package-lock.json
+    └── package.json
 ```

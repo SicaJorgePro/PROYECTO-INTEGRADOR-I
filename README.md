@@ -29,7 +29,7 @@
 
 - El sistema utiliza la librería de mongodb para interactuar con la base de datos NoSQL.
 
-- El sistema realiza todas las operaciones de un CRUD mediante las peticiones GET- POST - PUT y DELETE. Utilizando el servicio Thunder-Cliente.
+- El sistema realiza todas las operaciones de un CRUD mediante las peticiones GET- POST - PUT y DELETE. Utilizando el servicio <u>***Thunder-Cliente<u>***.
 
 ##  Datos necesarios que se requieren:
  :point_right: El archivo **env-example** esta vacio, remplazarlo por el archivo **env** 

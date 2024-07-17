@@ -8,7 +8,7 @@ const colec_base = process.env.coleccion_base;
 
 const mod_base = require("../modulos/errorbaseDato.modulo");
 
-const ModuloaltasProd = async (reg_id, nuevoproducto,res) => {
+const ModuloaltasProd = async (reg_id, nuevoproducto) => {
   try {
 
     const client = await connectToMongoDB();
@@ -19,30 +19,20 @@ const ModuloaltasProd = async (reg_id, nuevoproducto,res) => {
       .collection(colec_base)
       .findOne({ id: reg_id });
     
-    console.log(reg_existente);
-    console.log("1");
-
     if (reg_existente) {
                     const error = new Error("Registro Existente !!!!");
                     error.status = 302;
                     throw error;
     } else {
-      console.log("NO EXISTE");
-      console.log(nuevoproducto);
-
-      const collection = client.db(base_dato).collection(colec_base);
-      console.log("pasa");
-      await collection.insertOne(nuevoproducto)
-      const error = new Error();
-      error.status = 202;
-      throw error;
+      const collection = await db
+        .collection(colec_base).insertOne(nuevoproducto);
+         return collection;
     }
   } catch (error) {
-                console.log("2");
-                throw error;
+               throw error;
   } finally {
-            console.log("3");
-            await disconnectToMongoDB();
+    
+          await disconnectToMongoDB();
   }
 };
  

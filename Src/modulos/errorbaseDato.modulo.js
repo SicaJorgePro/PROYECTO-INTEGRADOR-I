@@ -1,15 +1,14 @@
 const base_error = async (client) => {
   try {
+     
     if (!client) {
       const error = new Error("ERROR DE SERVIDOR");
       error.status = 500;
       throw error;
     }
-     console.log("bien")
-     return;
+    return !client;
     
-  } catch (error) {
-    console.log("mal");
+   } catch (error) {
      throw error;
   }
 };

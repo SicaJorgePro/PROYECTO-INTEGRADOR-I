@@ -12,13 +12,15 @@ const modulo_prod = async () => {
  try {
    const client = await connectToMongoDB();
    const baseError = await mod_base.base_error(client); // **modulo de verificar base
-   const db = client.db(base_dato);
-   const productos = await db
-     .collection(colec_base)
-     .find()
-     .sort({ id: 1 })
-     .toArray();
-   return productos;
+   if (baseError== false){
+     const db = client.db(base_dato);
+     const productos = await db
+       .collection(colec_base)
+       .find()
+       .sort({ id: 1 })
+       .toArray();
+     return productos;
+   }   
  } catch (error) {
     throw error;
   }finally {
