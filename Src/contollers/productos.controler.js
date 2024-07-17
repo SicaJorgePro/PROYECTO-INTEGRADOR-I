@@ -51,6 +51,7 @@ const productos_id = async (req,res) => {
 const produc_categoria = async (req, res) => {
 
   const produc_cat = req.params.categ || "";
+  
   try {
     const productos = await noduloProd_Cat.modulo_Prod_cat(produc_cat);
     res.status(200).render("listados", { titulo: "PRODUCTOS POR CATEGORIA",productos});

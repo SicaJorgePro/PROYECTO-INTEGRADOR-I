@@ -11,7 +11,7 @@ const mod_base = require("../modulos/errorbaseDato.modulo");
 const modulo_prod = async () => {
  try {
    const client = await connectToMongoDB();
-   const base_Dato = await mod_base.base_error(client); // **modulo de verificar base
+   const baseError = await mod_base.base_error(client); // **modulo de verificar base
    const db = client.db(base_dato);
    const productos = await db
      .collection(colec_base)
@@ -26,6 +26,9 @@ const modulo_prod = async () => {
   }
  
 };
+
+
+
 module.exports = {
   modulo_prod,
 };

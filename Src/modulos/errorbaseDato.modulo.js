@@ -5,9 +5,11 @@ const base_error = async (client) => {
       error.status = 500;
       throw error;
     }
+     console.log("bien")
      return;
     
   } catch (error) {
+    console.log("mal");
      throw error;
   }
 };

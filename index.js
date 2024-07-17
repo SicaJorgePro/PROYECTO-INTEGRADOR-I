@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, "Public")));
 app.use(layouts)
 app.set("layout","layouts/layout")
 
-// * ubicacion del rutas 
+// * ubicacion del rutas del proyectos
 const mainrouters = require("./Src/routers/main.routers");
 const productosRouter = require("./Src/routers/productos.routers")
 const GRUD_Router = require("./Src/routers/GRUD_produ.routers");
