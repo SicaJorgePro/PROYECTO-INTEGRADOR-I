@@ -1,8 +1,8 @@
 //? activar y desactivar la base
 const { connectToMongoDB, disconnectToMongoDB } = require("../db/mongodb");
 
-//? llamr a varibles de entorno que son nombre de la base
-//? y nombre de la coleccion
+//? llamar a variables de entorno que son nombres de la base
+//? y nombre de la colección
 const base_dato = process.env.base;
 const colec_base = process.env.coleccion_base;
 

@@ -3,8 +3,7 @@ const modulo_altasProducto=require("../modulos/altasProductos.modulos")
 const altasProductos = async (req, res) => {
   const nuevoproducto = req.body;
   const reg_id = nuevoproducto.id;
-  
-  try {
+    try {
     if (Object.keys(nuevoproducto).length === 0) {
       const error = new Error("ERROR...! NO HAY DATOS PARA AGREGAR!!!");
       error.status = 422;

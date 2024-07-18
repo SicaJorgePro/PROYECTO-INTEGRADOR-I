@@ -36,7 +36,7 @@ app.use("/productos", GRUD_Router);
 
 // ? cuando no existe la ruta
 app.use((req, res) => {
-  res.status(404).render("error_404", { titulo: "PAGINA NO ENCONTRADA" });
+  res.status(404).render("error_404", { titulo: "PAGINA NO ENCONTRADA!!" });
 });
 
 const PORT = process.env.PORT || 3000;

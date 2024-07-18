@@ -14,8 +14,7 @@ const ModificarProductos = async (req, res) => {
       reg_modif,
       modifproducto
     );
-     console.log(modificar);
-    if (modificar.matchedCount === 1) {
+     if (modificar.matchedCount === 1) {
       res.status(200).json(modifproducto);
       return;
     } else {
@@ -24,7 +23,7 @@ const ModificarProductos = async (req, res) => {
             throw error;
     }
   } catch (error) {
-    res.status(error.status).send(error.message);
+          res.status(error.status).send(error.message);
   }
 };
 

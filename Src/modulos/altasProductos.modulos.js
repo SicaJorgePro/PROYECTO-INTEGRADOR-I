@@ -1,11 +1,12 @@
 //? activar y desactivar la base
 const { connectToMongoDB, disconnectToMongoDB } = require("../db/mongodb");
 
-//? llamr a varibles de entorno que son nombre de la base
-//? y nombre de la coleccion
+//? llamar a variables de entorno que son nombres de la base
+//? y nombre de la colección
 const base_dato = process.env.base;
 const colec_base = process.env.coleccion_base;
 
+// ? requerir la base activa
 const mod_base = require("../modulos/errorbaseDato.modulo");
 
 const ModuloaltasProd = async (reg_id, nuevoproducto) => {
@@ -18,8 +19,7 @@ const ModuloaltasProd = async (reg_id, nuevoproducto) => {
     const reg_existente = await db
       .collection(colec_base)
       .findOne({ id: reg_id });
-    
-    if (reg_existente) {
+     if (reg_existente) {
                     const error = new Error("Registro Existente !!!!");
                     error.status = 302;
                     throw error;
