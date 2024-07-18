@@ -23,7 +23,8 @@
 
 - Se utiliza la librería ejs para realizar motores de plantilla y poder unir javacrip con html .
 
-- Utiliza <u>*** Ruters, Controladores y Módulos ***</u> que permite organizar las rutas de nuestra aplicación de manera modular y fácil de mantener.
+- Utiliza <u>**Ruters, Controladores y Módulos**
+</u> que permite organizar las rutas de nuestra aplicación de manera modular y fácil de mantener.
 
 -  Utilización de bootstrap con enlace de css y css propio para darle estilo a las  vistas.  
 
